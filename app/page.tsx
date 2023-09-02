@@ -6,10 +6,18 @@ import { memo, useState } from 'react'
 const Child1 = memo(() => {
   return (
     <>
-      <p>子コンポーネントです</p>
+      <p>Child1コンポーネントです</p>
     </>
   )
 })
+
+const Child2 = () => {
+  return (
+    <>
+      <p>Child2コンポーネントです</p>
+    </>
+  )
+}
 
 const Home = () => {
   const [text, setText] = useState('')
@@ -27,6 +35,7 @@ const Home = () => {
         onChange={handleChange}
       />
       <Child1 />
+      <Child2 />
     </div>
   )
 }
